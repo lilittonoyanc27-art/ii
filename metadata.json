@@ -1,0 +1,6 @@
+{
+  "name": "TuStart AI",
+  "description": "Интерактивная платформа ИИ-ассистентов для бизнеса: чат-виджеты, Telegram-боты, контент-агенты и автоматическая обработка почты.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-purple: #a855f7;
+  --color-brand-blue: #3b82f6;
+  --color-brand-cyan: #06b6d4;
+  --color-brand-pink: #ec4899;
+  --color-brand-fuchsia: #d946ef;
+}
+
+/* Base style resets with Vibrant Palette base */
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at 50% 50%, #0d0628 0%, #050212 100%);
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* High-Energy floating background glows */
+.mesh-glow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.mesh-glow-1 {
+  position: absolute;
+  top: -5%;
+  left: 15%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.22) 0%, rgba(139, 92, 246, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(95px);
+  animation: floatGlow1 22s infinite alternate ease-in-out;
+}
+.mesh-glow-2 {
+  position: absolute;
+  top: 35%;
+  right: -5%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, rgba(59, 130, 246, 0.05) 60%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(100px);
+  animation: floatGlow2 28s infinite alternate ease-in-out;
+}
+.mesh-glow-3 {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, rgba(217, 70, 239, 0.04) 50%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(90px);
+  animation: floatGlow3 20s infinite alternate ease-in-out;
+}
+
+@keyframes floatGlow1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(8vw, 6vh) scale(1.15); }
+}
+@keyframes floatGlow2 {
+  0% { transform: translate(0, 0) scale(1.1); }
+  100% { transform: translate(-7vw, -8vh) scale(0.9); }
+}
+@keyframes floatGlow3 {
+  0% { transform: translate(0, 0) scale(0.95); }
+  100% { transform: translate(4vw, -4vh) scale(1.1); }
+}
+
+/* Glassy modern high-energy cards */
+.glass-panel {
+  background: rgba(18, 10, 48, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 12px 36px 0 rgba(5, 2, 18, 0.55);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel:hover {
+  border-color: rgba(236, 72, 153, 0.45);
+  box-shadow: 0 16px 48px -10px rgba(236, 72, 153, 0.3), 0 0 15px -3px rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Custom glowing interactive buttons */
+.btn-vibrant-gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #06b6d4 100%);
+  background-size: 200% auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.35);
+}
+.btn-vibrant-gradient:hover {
+  background-position: right center;
+  box-shadow: 0 6px 28px rgba(236, 72, 153, 0.55), 0 0 12px rgba(6, 182, 212, 0.3);
+  transform: scale(1.025);
+}
+.btn-vibrant-gradient:active {
+  transform: scale(0.975);
+}
+
+/* Custom premium scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050212;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ec4899, #a855f7, #06b6d4);
+  border-radius: 9999px;
+  border: 2px solid #050212;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #d946ef, #a855f7, #3b82f6);
+}
+
+/* Pulse effects for AI interfaces */
+@keyframes intensePulseGlow {
+  0%, 100% {
+    opacity: 0.65;
+    box-shadow: 0 0 12px rgba(236, 72, 153, 0.3);
+  }
+  50% {
+    opacity: 0.95;
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.65);
+  }
+}
+.pulse-glow-border {
+  animation: intensePulseGlow 3s infinite ease-in-out;
+}
+
